@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+/* styles.css */
+.btn-primary {
+  @apply bg-blue-500 text-white font-bold py-2 px-4 my-4 mx-4 rounded shadow-lg;
+}
+
+.btn-primary:hover {
+  @apply bg-blue-700;
+}
