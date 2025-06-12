@@ -9,6 +9,12 @@ const dropdown = document.getElementById('dropdown-menu');
   });
 }
 
+document.getElementById('about-link').addEventListener('click', (e) => {
+   e.preventDefault();
+  document.getElementById('about-page').scrollIntoView({ behavior: 'smooth' });
+});
 
-
-
+document.getElementById('contact-link').addEventListener('click', (e) => {
+    e.preventDefault(); 
+  document.getElementById('contact-page').scrollIntoView({ behavior: 'smooth' });
+});
