@@ -7,46 +7,40 @@
   </head>
   <body class="bg-gray-300 min-h-screen">
     <nav>
-      <div class="flex space-x-4  bg-red-300 p-4">
+      <div class="flex space-x-4 bg-red-300 p-4">
         <h1 class="text-4xl font-bold text-white">Company Name</h1>
-      <ul class="flex space-x-2 justify-end ml-auto">
-        <li class="btn" ><a href="#" id="home-link">Home</a></li>
-        <li class="btn"><a href="#" id="about-link">About</a></li>
-        <li class="btn"><a href="#" id="contact-link">Contact</a></li>
-        <li id="menu-btn" class="btn"><a href="#">Menu</a>
+        <ul class="flex space-x-2 justify-end ml-auto">
+          <li class="btn"><a href="#" id="home-link">Home</a></li>
+          <li class="btn"><a href="#" id="about-link">About</a></li>
+          <li class="btn"><a href="#" id="contact-link">Contact</a></li>
+          <li id="menu-btn" class="btn"><a href="#">Menu</a>
             <ul id="dropdown-menu" class="absolute right-0 mt-2 w-40 bg-white rounded shadow-lg hidden z-10">
               <li class="px-4 py-2 hover:bg-gray-200 cursor-pointer"><a href="#">Option 1</a></li>
               <li class="px-4 py-2 hover:bg-gray-200 cursor-pointer"><a href="#">Option 2</a></li>
               <li class="px-4 py-2 hover:bg-gray-200 cursor-pointer"><a href="#">Option 3</a></li>
             </ul>
-        </li>
-      </ul>
+          </li>
+        </ul>
       </div>
     </nav>
-      <h1 class="font-bold text-4xl text-center mt-5">Welcome to my Store</h1>
-    <div class="flex justify-center items-center py-5"> <!-- Home -->
-    <div class="bg-gray-400 p-4 flex-col justify-center w-1/3 rounded-xl ">
-      <h1 class="text-4xl text-center">Blue Shoes</h1>
-      <img class=" rounded-xl w-full my-3" src="https://th.bing.com/th/id/OIP.TIWckpoCSJiDO_8U3qewegHaEh?rs=1&pid=ImgDetMain" alt="">
-      <div class="flex flex-col">
-        <p>These kicks aren’t just shoes—they’re a statement. With a sleek silhouette, ultra-soft cushioning, and street-smart grip, they’re built for bold moves and effortless comfort. Whether you're hitting the pavement or turning heads downtown, this pair delivers performance with personality. Lace up. Level up. </p>
-        <p class="text-white bg-blue-400 text-center my-2 rounded">Price</p>
-        <button class="bg-yellow-200 p-2 rounded-2xl items-center hover:bg-yellow-400 active:bg-yellow-600">Add to Cart</button>
-      </div>
+
+    <!-- Removed duplicated <h1>, JS will inject it -->
+    <div class="flex justify-center items-center py-5" id="home-page">
+      <!-- JavaScript will render content here -->
     </div>
-    </div>
-    <div id ="about-page" class="bg-yellow-100 py-4"> <!-- About us page --> 
-      <h1  class="text-4xl text-center p-4 font-bold">About Us</h1>
+
+    <div id="about-page" class="bg-yellow-100 py-4">
+      <h1 class="text-4xl text-center p-4 font-bold">About Us</h1>
       <div class="flex justify-center">
         <div class="bg-green-100 p-4 w-1/3 rounded-2xl text-center">
           <p class="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
         </div>
       </div>
     </div>
-    
-    <section id="contact-page"> <!-- Contact -->
-      <div class="bg-gray-100 py-10" >
-        <h1 class="text-4xl text-center p-4 font-bold" >Contact</h1>
+
+    <section id="contact-page">
+      <div class="bg-gray-100 py-10">
+        <h1 class="text-4xl text-center p-4 font-bold">Contact</h1>
         <div class="flex justify-center">
           <div class="bg-green-100 p-4 w-1/3 rounded-2xl text-center">
             <p class="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
@@ -54,7 +48,7 @@
         </div>
       </div>
     </section>
-    </div>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
