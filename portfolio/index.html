@@ -16,7 +16,7 @@
         <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
       </nav>    
     </header>
-    <section id="home" class="h-screen px-6 flex items-center justify-center bg-gray-50 text-center ">
+    <section id="home" class="min-h-[70vh] px-6 flex items-center justify-center bg-gray-50 text-center ">
       <div class="max-w-3xl mx-auto">
       <h1 class=" text-4xl md:text-5xl font-bold mb-6">Hello, I am <span class="text-blue-600"> <br>Frederick Masangkay</span> </h1>
       <p class="max-w-3xl mx-auto text-lg text-gray-600 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
@@ -40,7 +40,7 @@
       </div>
     </div>
     </section>
-    <section id="about" class=" h-screen px-6 py-20 flex items-center justify-center bg-white text-center">
+    <section id="about" class="min-h-[70vh] px-6 py-20 flex items-center justify-center bg-white text-center">
       <div class="max-w-3xl mx-auto">
       <!-- About Me title with icon -->
       <div class="flex justify-center items-center space-x-4 mb-8">
@@ -65,8 +65,56 @@
       </div>
     </section>
     
-    <section id="portfolio"> </section>
-    <section id="contact"> </section>
+    <section id="portfolio" class="min-h-[70vh] px-6 py-20 "> 
+      <div class="flex justify-center items-center space-x-4 mb-12">
+        <i class="text-5xl text-blue-600 fas fa-laptop-code"></i>
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-600">
+          My Projects
+        </h2>
+      </div>
+      
+        <!-- Portfolio Cards Container -->
+        <div id="portfolio-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 px-2"></div>
+        <!-- JavaScript will inject cards here -->
+      </div>
+
+    </section>
+    <section id="contact" class="min-h-[50vh] px-6 py-20 bg-gray-100">
+      <div class="max-w-3xl mx-auto text-center">
+        <!-- Title with icon -->
+        <div class="flex justify-center items-center space-x-4 mb-8">
+          <i class="fas fa-envelope text-5xl text-blue-600"></i>
+          <h2 class="text-3xl md:text-4xl font-bold text-blue-600">Get in Touch</h2>
+        </div>
+    
+        <p class="mb-10 text-gray-600 leading-relaxed">
+          Whether you have a question or just want to say hello, feel free to drop a message!
+        </p>
+    
+        <form class="bg-white p-8 rounded-lg shadow-md text-left">
+          <div class="mb-5">
+            <label for="name" class="block text-gray-700 font-semibold mb-2">Name</label>
+            <input type="text" id="name" name="name" required
+              class="w-full border border-gray-300 rounded-md px-2 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+          </div>
+          <div class="mb-5">
+            <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+            <input type="email" id="email" name="email" required
+              class="w-full border border-gray-300 rounded-md px-2 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+          </div>
+          <div class="mb-5">
+            <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
+            <textarea id="message" name="message" rows="5" required
+              class="w-full border border-gray-300 rounded-md px-2 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"></textarea>
+          </div>
+          <button type="submit"
+            class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-700 transition-colors w-full">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+    
 
     <script type="module" src="/src/main.js"></script>
   </body>
