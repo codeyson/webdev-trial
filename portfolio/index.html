@@ -31,7 +31,7 @@
         <a href="" target="_blank" class="hover:text-blue-700">
           <i class="fab fa-linkedin"></i>
         </a>
-        <a href="" target="_blank" class="hover:text-gray-900">
+        <a href="https://github.com/codeyson" target="_blank" class="hover:text-gray-900">
           <i class="fab fa-github"></i>
         </a>
         <a href="/path-to-cv.pdf" download class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition text-sm">
@@ -79,41 +79,71 @@
       </div>
 
     </section>
+    <!-- Contact Us-->
     <section id="contact" class="min-h-[50vh] px-6 py-20 bg-gray-100">
-      <div class="max-w-3xl mx-auto text-center">
-        <!-- Title with icon -->
-        <div class="flex justify-center items-center space-x-4 mb-8">
-          <i class="fas fa-envelope text-5xl text-blue-600"></i>
-          <h2 class="text-3xl md:text-4xl font-bold text-blue-600">Get in Touch</h2>
+      <div class="max-w-5xl mx-auto">
+        <div class="bg-white p-10 rounded-lg shadow-md">
+          <!-- Title with icon -->
+          <div class="flex items-center space-x-4 mb-8 justify-center">
+            <i class="fas fa-envelope text-5xl text-blue-600"></i>
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-600">Get in Touch</h2>
+          </div>
+    
+          <p class="text-center text-gray-600 mb-10 leading-relaxed">
+            Whether you have a question or just want to say hello, feel free to reach out!
+          </p>
+    
+          <!-- Side-by-side layout -->
+          <div class="flex flex-col md:flex-row gap-10">
+            <!-- Contact Info -->
+            <div class="md:w-1/2">
+              <h3 class="text-xl font-semibold text-blue-600 mb-4">Contact Info</h3>
+              <ul class="text-gray-700 space-y-2 mb-6">
+                <li><strong>Email:</strong> support@example.com</li>
+                <li><strong>Phone:</strong> +1 (123) 456-7890</li>
+                <li><strong>Address:</strong> 123 Main Street, City, Country</li>
+              </ul>
+    
+              <!-- QR Code Placeholder -->
+              <div class="flex flex-col items-center">                
+                <div class="w-80 h-80 bg-gray-200 border border-gray-300 rounded-md flex items-center justify-center">
+                  <span class="text-gray-500 text-sm">QR Code</span>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Online Inquiry Form -->
+            <div class="md:w-1/2">
+              <h3 class="text-xl font-semibold text-blue-600 mb-4">Online Inquiry</h3>
+              <form>
+                <div class="mb-4">
+                  <label for="name" class="block text-gray-700 font-semibold mb-2">Name</label>
+                  <input type="text" id="name" name="name" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+                </div>
+                <div class="mb-4">
+                  <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+                  <input type="email" id="email" name="email" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+                </div>
+                <div class="mb-4">
+                  <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
+                  <textarea id="message" name="message" rows="4" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"></textarea>
+                </div>
+                <button type="submit"
+                  class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-700 transition-colors w-full">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
-    
-        <p class="mb-10 text-gray-600 leading-relaxed">
-          Whether you have a question or just want to say hello, feel free to drop a message!
-        </p>
-    
-        <form class="bg-white p-8 rounded-lg shadow-md text-left">
-          <div class="mb-5">
-            <label for="name" class="block text-gray-700 font-semibold mb-2">Name</label>
-            <input type="text" id="name" name="name" required
-              class="w-full border border-gray-300 rounded-md px-2 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-400" />
-          </div>
-          <div class="mb-5">
-            <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
-            <input type="email" id="email" name="email" required
-              class="w-full border border-gray-300 rounded-md px-2 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-400" />
-          </div>
-          <div class="mb-5">
-            <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
-            <textarea id="message" name="message" rows="5" required
-              class="w-full border border-gray-300 rounded-md px-2 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"></textarea>
-          </div>
-          <button type="submit"
-            class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-700 transition-colors w-full">
-            Send Message
-          </button>
-        </form>
       </div>
     </section>
+    
+    
+    
     
 
     <script type="module" src="/src/main.js"></script>
