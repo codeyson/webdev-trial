@@ -1,1 +1,67 @@
-@import "tailwindcss";
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Center everything on the page */
+  body {
+    background: linear-gradient(to right, #8ec5fc, #e0c3fc);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Weather container */
+  #weather {
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  #weather h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Input & button */
+  #city {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    margin-right: 10px;
+  }
+  
+  #checkWeather {
+    padding: 10px 15px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #checkWeather:hover {
+    background-color: #45a049;
+  }
+  
+  /* Display data */
+  #displayData {
+    margin-top: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  #displayData p {
+    font-size: 36px;
+    margin: 10px 0;
+  }
+  

@@ -6,13 +6,12 @@ import './style.css'
 async function checkWeather () {
   const API_key = '74d4965049c25ba5da803a8a61b72ad9';
   const city_name = document.getElementById('city').value.trim();
-
+  
   if (!city_name) {
     alert('Please enter a city name');
     return;
   }
 
-  // Use template literals here:
   const url = `http://api.openweathermap.org/data/2.5/weather?q=${city_name}&appid=${API_key}&units=metric`;
 
     try {
