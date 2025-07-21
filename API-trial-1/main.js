@@ -38,3 +38,4 @@ document.addEventListener('DOMContentLoaded', () => {
   const button = document.getElementById('checkWeather');
   button.addEventListener('click', checkWeather);
 });
+
