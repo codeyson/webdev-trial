@@ -1,6 +1,3 @@
-
-
-
 import './style.css'
 
 async function checkWeather () {
@@ -37,5 +34,11 @@ async function checkWeather () {
 document.addEventListener('DOMContentLoaded', () => {
   const button = document.getElementById('checkWeather');
   button.addEventListener('click', checkWeather);
-});
 
+  // Option 1: Trigger when Enter is pressed anywhere on the page
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      button.click();
+    }
+  });
+});
