@@ -13,19 +13,27 @@ async function checkWeather () {
   }
 
   // Use template literals here:
-  const url = `http://api.openweathermap.org/geo/1.0/direct?q=${city_name}&limit=1&appid=${API_key}`;
+  const url = `http://api.openweathermap.org/data/2.5/weather?q=${city_name}&appid=${API_key}&units=metric`;
 
-  fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      // You can add more logic here to fetch weather details or update UI
-    })
-    .catch((error) => {
-      console.error('Error fetching data:', error);
-      alert('Failed to fetch data');
-    });
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+
+
+      const name = data.name;
+      const temp = data.main.temp;
+      const humidity = data.main.humidity;
+
+      document.getElementById('name').innerHTML = `Name: ${name}`;
+      document.getElementById('temp').innerHTML = `Temperature: ${temp}`;
+      document.getElementById('humidity').innerHTML = `Humidity: ${humidity}`;
+  }
+  catch (error) {
+    console.error('Error fetching data:', error);
+    alert('Failed to fetch data');
+  }
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const button = document.getElementById('checkWeather');
