@@ -23,6 +23,8 @@ async function checkWeather () {
       document.getElementById('name').innerHTML = `Name: ${name}`;
       document.getElementById('temp').innerHTML = `Temperature: ${temp}`;
       document.getElementById('humidity').innerHTML = `Humidity: ${humidity}`;
+
+      city.value = '';
   }
   catch (error) {
     console.error('Error fetching data:', error);
