@@ -12,7 +12,7 @@ async function generateQuotes() {
     return;
   }
 
-const url = `https://api.quotable.io/random`;
+const url = `https://api.quotable.io/random`; // use different API 
 
 
 
