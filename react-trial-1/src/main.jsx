@@ -7,6 +7,8 @@ import { Food } from './Food.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <App />
+    <Greeting />
     <Food />
   </StrictMode>,
 )
