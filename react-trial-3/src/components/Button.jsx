@@ -1,3 +1,6 @@
+// this is for props practice
+
+
 export default function Button({ text = "Click Me!", color = "blue", fontSize = 12, handleClick }) {
     const buttonStyle = {
       color: color,

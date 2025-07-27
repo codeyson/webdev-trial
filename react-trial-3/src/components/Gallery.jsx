@@ -1,3 +1,5 @@
+// this is for state practice
+
 import { useState } from 'react';
 import { sculptureList } from './data.js';
 

@@ -1,3 +1,6 @@
+// this is for state practice
+
+
 import { useState } from 'react';
 
 export default function Form() {
