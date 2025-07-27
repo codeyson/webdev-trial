@@ -1,30 +1,30 @@
-import { useState } from 'react'
+import Form from './components/Button' 
 import './App.css'
 
-function Button(props) {
+function Button({ text = "Click Me!", color = "blue", fontSize = 12, handleClick }) {
   const buttonStyle = {
-    color: props.color,
-    fontSize: props.fontSize + 'px'
+    color: color,
+    fontSize: fontSize + "px"
   };
 
-
   return (
-    <button style={buttonStyle}>{props.text}</button>
-  );
-}
-
-function Button2() {
-  return (
-    <button>Don't Click Me!</button>
+    <button onClick={handleClick} style={buttonStyle}>
+      {text}
+    </button>
   );
 }
 
 export default function App() {
+  const handleButtonClick = () => {
+    window.location.href = "https://www.google.com";
+  };
+
   return (
     <div>
-      <Button text="Click Me!" color="blue" fontSize={12} />
-      <Button text="Don't Click Me!" color="red" fontSize={12} />
-      <Button text="Click Me!" color="blue" fontSize={20} />
+      <Button handleClick={handleButtonClick} />
+      <Form />
     </div>
   );
+
 }
+
