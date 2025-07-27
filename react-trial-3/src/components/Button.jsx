@@ -1,36 +1,12 @@
-import { useState } from 'react';
-
-export default function Form() {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-
-  function handleFirstNameChange(e) {
-    setFirstName(e.target.value);
+export default function Button({ text = "Click Me!", color = "blue", fontSize = 12, handleClick }) {
+    const buttonStyle = {
+      color: color,
+      fontSize: fontSize + "px"
+    };
+  
+    return (
+      <button onClick={handleClick} style={buttonStyle}>
+        {text}
+      </button>
+    );
   }
-
-  function handleLastNameChange(e) {
-    setLastName(e.target.value);
-  }
-
-  function handleReset() {
-    setFirstName('');
-    setLastName('');
-  }
-
-  return (
-    <form onSubmit={e => e.preventDefault()}>
-      <input
-        placeholder="First name"
-        value={firstName}
-        onChange={handleFirstNameChange}
-      />
-      <input
-        placeholder="Last name"
-        value={lastName}
-        onChange={handleLastNameChange}
-      />
-      <h1>Hi, {firstName} {lastName}</h1>
-      <button onClick={handleReset}>Reset</button>
-    </form>
-  );
-}

@@ -1,18 +1,10 @@
-import Form from './components/Button' 
+import Form from './components/Form.jsx'
+import Button from './components/Button.jsx' 
+import Gallery from './components/Gallery.jsx'
+
 import './App.css'
 
-function Button({ text = "Click Me!", color = "blue", fontSize = 12, handleClick }) {
-  const buttonStyle = {
-    color: color,
-    fontSize: fontSize + "px"
-  };
 
-  return (
-    <button onClick={handleClick} style={buttonStyle}>
-      {text}
-    </button>
-  );
-}
 
 export default function App() {
   const handleButtonClick = () => {
@@ -23,6 +15,7 @@ export default function App() {
     <div>
       <Button handleClick={handleButtonClick} />
       <Form />
+      <Gallery />
     </div>
   );
 
