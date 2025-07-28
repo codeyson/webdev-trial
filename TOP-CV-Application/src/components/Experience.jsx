@@ -1,7 +1,9 @@
+import '../styles/Experience.css'
+
 function Experience () {
     return (
         <>
-        <div>Experience</div>
+        <div className='exp'>Experience</div>
         </>
     )
 

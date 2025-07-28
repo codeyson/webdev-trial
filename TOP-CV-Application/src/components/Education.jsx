@@ -1,7 +1,9 @@
+import '../styles/Education.css'
+
 function Education () {
     return (
         <>
-        <div>education</div>
+        <div className="educ">education</div>
         </>
     )
 

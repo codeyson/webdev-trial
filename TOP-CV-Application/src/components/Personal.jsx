@@ -1,3 +1,6 @@
+import '../styles/Personal.css'
+
+
 function Personal () {
     return (
         <>
