@@ -1,0 +1,22 @@
+.personal {
+    display: flex;
+    border: 1px solid black;
+    padding: 1em;
+    margin: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-personal {
+    width: 100px;
+    height: 100px;
+    padding: 1em;
+}
+
+.info-personal {
+    line-height: 1.2;
+}
+
+.name {
+    margin-bottom: .5em;
+}
