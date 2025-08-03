@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import PokemonCard from './Card.jsx';
+import '../styles/Pokemon.css';
 
 const allPokemonNames = [
   'pikachu', 'bulbasaur', 'charmander', 'squirtle', 'eevee',
@@ -23,21 +24,18 @@ function MemoryGame() {
       setMessage(`Oops! You already clicked ${currentName}. Game reset.`);
       setSelected([]);
       setScore(0);
-      // Reset cards to random picks:
       setCards(generateRandomCards());
     } else {
       // New selection
-      const newSelected = [selected, currentName];
+      const newSelected = [...selected, currentName];
       setSelected(newSelected);
       setScore(newSelected.length);
       setMessage(`Good! Score: ${newSelected.length}`);
 
-      // Update cards with new random Pokémon (shuffle and pick new names)
       setCards(generateRandomCards());
     }
   }
 
-  // Generate array of 4 random unique Pokémon names from allPokemonNames
   function generateRandomCards() {
     const shuffled = allPokemonNames
       .sort(() => 0.5 - Math.random())
@@ -47,15 +45,16 @@ function MemoryGame() {
 
   return (
     <>
-      <h1>Memory Game</h1>
-      <p>{message}</p>
-      <p>Score: {score}</p>
+      <h1 className="game-title">Memory Game</h1>
+      <p className="game-message">{message}</p>
+      <p className="game-score">Score: {score}</p>
 
       <div className="pokemon-card-container">
         {cards.map((name) => (
           <div
             key={name}
             onClick={() => handleCardClick(name)}
+            className="pokemon-card-wrapper"
             style={{ cursor: 'pointer' }}
           >
             <PokemonCard name={name} />
