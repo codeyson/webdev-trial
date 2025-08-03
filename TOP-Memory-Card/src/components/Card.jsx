@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import '../styles/Card.css';
 
 function PokemonCard({ name = 'ditto' }) {
     const [pokemon, setPokemon] = useState(null);
@@ -23,26 +22,23 @@ function PokemonCard({ name = 'ditto' }) {
   fetchPokemon();
   }, [name]);
   return (
-<div className="pokemon-card">
-  {error && <p className="error-message">Error: {error}</p>}
-  {!pokemon && !error && <p className="loading-message">Loading...</p>}
-  {pokemon && (
-    <>
-      <h2 className="pokemon-name">
-        {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
-      </h2>
-      <img
-        className="pokemon-image"
-        src={pokemon.sprites.front_default}
-        alt={pokemon.name}
-      />
-    </>
-  )}
-</div>
-
+    <div className="pokemon-card">
+      {error && <p style={{ color: 'red' }}>Error: {error}</p>}
+      {!pokemon && !error && <p>Loading...</p>}
+      {pokemon && (
+        <>
+          <h2 style={{ margin: 0 }}>
+            {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
+          </h2>
+          <img
+            src={pokemon.sprites.front_default}
+            alt={pokemon.name}
+            style={{ width: '60px', height: '60px' }}
+          />
+        </>
+      )}
+    </div>
   );
 }
-
-
 
 export default PokemonCard;

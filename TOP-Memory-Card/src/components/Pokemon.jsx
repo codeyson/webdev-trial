@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import PokemonCard from './Card.jsx';
+import PokemonCard from './Card';
 import '../styles/Pokemon.css';
 
 const allPokemonNames = [
