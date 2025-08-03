@@ -1,20 +1,12 @@
-import './App.css'
-import PokemonCard from './components/Card'
+import './App.css';
+import MemoryGame from './components/Pokemon.jsx';
 
 function App() {
   return (
-    <>
-      <div className="App" >
-        <h1>Top Memory Card</h1>
-      </div>
-      <div className='pokemon-card-container'>
-        <PokemonCard name="pikachu" />
-        <PokemonCard name="pikachu" />
-        <PokemonCard name="pikachu" />
-        <PokemonCard name="pikachu" />
-      </div>
-    </>
-  )
+    <div className="App">
+      <MemoryGame />
+    </div>
+  );
 }
 
-export default App
+export default App;
