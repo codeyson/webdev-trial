@@ -14,6 +14,7 @@ function MemoryGame() {
     'bulbasaur',
     'charmander',
     'squirtle',
+    'meowth',
   ]);
   const [score, setScore] = useState(0);
   const [message, setMessage] = useState('Click a card to start!');
@@ -39,7 +40,7 @@ function MemoryGame() {
   function generateRandomCards() {
     const shuffled = allPokemonNames
       .sort(() => 0.5 - Math.random())
-      .slice(0, 4);
+      .slice(0, 8);
     return shuffled;
   }
 
