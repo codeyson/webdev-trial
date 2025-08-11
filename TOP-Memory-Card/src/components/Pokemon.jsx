@@ -15,6 +15,10 @@ function MemoryGame() {
     'charmander',
     'squirtle',
     'meowth',
+    'quagsire',
+    'psyduck',
+    'lapras',
+    
   ]);
   const [score, setScore] = useState(0);
   const [message, setMessage] = useState('Click a card to start!');
