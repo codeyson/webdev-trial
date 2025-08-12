@@ -16,7 +16,7 @@ export default function GetInfo() {
   };
 
   return (
-    <div>
+    <div className="get-info-container">
       <input
         type="text"
         placeholder="Enter your name"
@@ -44,7 +44,7 @@ export default function GetInfo() {
       <h2>Email: {email}</h2>
       <h2>Phone: {phone}</h2>
 
-      <button onClick={SavePDF}>Save as pdf</button>
+      <button onClick={SavePDF}>Save as PDF</button>
     </div>
   );
 }
