@@ -15,9 +15,7 @@ function MemoryGame() {
     'charmander',
     'squirtle',
     'meowth',
-    'quagsire',
-    'psyduck',
-    'lapras',
+    'quagsire'
     
   ]);
   const [score, setScore] = useState(0);
