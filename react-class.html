@@ -1,0 +1,92 @@
+# Class Based Components
+
+```jsx
+class Button extends React.Component {
+    render() {
+        return (
+            <button onClick={this.props.handleClick}>
+                {this.props.text}
+            </button>
+        );
+    }
+}
+```
+```
+import { useState } from "react";
+
+const FunctionalInput = ({ name }) => {
+  const [todos, setTodos] = useState(["Just some demo tasks", "As an example"]);
+  const [inputVal, setInputVal] = useState("");
+
+  const handleInputChange = (e) => {
+    setInputVal(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setTodos((prevTodos) => [...prevTodos, inputVal]);
+    setInputVal("");
+  };
+
+  return (
+    <section>
+      <h3>{name}</h3>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="task-entry">Enter a task: </label>
+        <input
+          type="text"
+          id="task-entry"
+          name="task-entry"
+          value={inputVal}
+          onChange={handleInputChange}
+        />
+        <button type="submit">Submit</button>
+      </form>
+      <h4>All the tasks!</h4>
+      <ul>
+        {todos.map((todo) => (
+          <li key={todo}>{todo}</li>
+        ))}
+      </ul>
+    </section>
+  );
+};
+
+export default FunctionalInput;
+```
+1. **Class-Based Components (Old but still important to understand)**
+
+   - **Syntax**: Extend `React.Component` and implement a `render()` method that returns JSX.
+   - **Props Usage**:
+     - Access props via `this.props`.
+     - Props are read-only and passed from the parent component.
+   - **Event Handling**:
+     - Example: `<button onClick={this.props.handleClick}>` shows how to pass event handler props.
+   - **Use Case**: Older React codebases rely on them, though hooks now make functional components more common.
+
+---
+
+2. **Functional Components with Hooks (Modern React)**
+
+   - **Syntax**: Just a JavaScript function returning JSX.
+   - **`useState` Hook**:
+     - Used for managing local component state (`todos`, `inputVal`).
+     - Returns a state variable and a setter function.
+   - **State Updates**:
+     - `setTodos(prevTodos => [...prevTodos, inputVal])` demonstrates using the previous state to compute the new state.
+   - **Event Handling in Functional Components**:
+     - Controlled form inputs: Value is bound to `inputVal` and updated with `onChange`.
+     - `handleSubmit` prevents default form behavior and updates state.
+   - **Dynamic Rendering**:
+     - Mapping over `todos` to generate `<li>` elements.
+     - Using `key` for list items to help React track updates.
+
+---
+
+3. **General React Best Practices Highlighted**
+
+   - Keep state localized to components when only that component needs it.
+   - Use controlled components for form inputs to keep UI in sync with state.
+   - Always provide unique keys when rendering lists.
+   - Separate concerns: The class `Button` is purely presentational, while `FunctionalInput` manages its own state and logic.
+
