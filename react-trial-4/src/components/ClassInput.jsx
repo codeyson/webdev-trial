@@ -22,6 +22,13 @@ class ClassInput extends Component {
     }));
   }
 
+handleDelete(todoToDelete) {
+  this.setState((state) => ({
+    todos: state.todos.filter((todo) => todo !== todoToDelete),
+  }));
+}
+
+
   handleSubmit(e) {
     e.preventDefault();
     this.setState((state) => ({
@@ -44,13 +51,19 @@ class ClassInput extends Component {
             onChange={this.handleInputChange}
           />
           <button type="submit">Submit</button>
+
         </form>
+
         <h4>All the tasks!</h4>
         <ul>
-          {this.state.todos.map((todo) => (
-            <li key={todo}>{todo}</li>
-          ))}
+        {this.state.todos.map((todo) => (
+            <li key={todo}>
+            {todo}{" "}
+            <button onClick={() => this.handleDelete(todo)}>Delete</button>
+            </li>
+        ))}
         </ul>
+
       </section>
     );
   }
