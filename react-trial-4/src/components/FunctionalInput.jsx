@@ -1,3 +1,5 @@
+// Function
+
 import { useState } from "react";
 
 const FunctionalInput = ({ name }) => {
