@@ -9,12 +9,20 @@ class ClassInput extends Component {
     this.state = {
       todos: [],
       inputVal: "",
+      count: 0,
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
+    this.handleCount = this.handleCount.bind(this);
   }
 
+  handleCount() {
+    this.setState((state) => ({
+      count: state.count + 1
+    }))
+  }
   handleInputChange(e) {
     this.setState((state) => ({
       ...state,
@@ -25,16 +33,21 @@ class ClassInput extends Component {
 handleDelete(todoToDelete) {
   this.setState((state) => ({
     todos: state.todos.filter((todo) => todo !== todoToDelete),
+    count: state.count - 1
   }));
 }
 
 
-  handleSubmit(e) {
+ handleSubmit(e) {
     e.preventDefault();
-    this.setState((state) => ({
-      todos: state.todos.concat(state.inputVal),
-      inputVal: "",
-    }));
+    if (this.state.inputVal.trim() === "") return; // prevent empty todos
+    this.setState(
+      (state) => ({
+        todos: state.todos.concat(state.inputVal),
+        inputVal: "",
+        count: state.count + 1
+      }),
+    );
   }
 
   render() {
@@ -54,7 +67,8 @@ handleDelete(todoToDelete) {
 
         </form>
 
-        <h4>All the tasks!</h4>
+        <h4>All the tasks!</h4> 
+        <h4 onChange= {this.handleCount}>Count: {this.state.count}</h4>
         <ul>
         {this.state.todos.map((todo) => (
             <li key={todo}>
