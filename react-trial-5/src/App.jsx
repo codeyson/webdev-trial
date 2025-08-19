@@ -1,14 +1,22 @@
+import { Link, Outlet } from "react-router-dom";
 
-import './App.css'
-import Profile from './components/Profile'
-
-function App() {
-
+const App = () => {
   return (
-    <>
-     <Profile />
-    </>
-  )
-}
+    <div>
+      <h1>Hello from the main page of the app!</h1>
+      <p>Here are some examples of links to other pages</p>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/profile">Profile page</Link>
+          </li>
+        </ul>
+      </nav>
 
-export default App
+      {/* This allows child routes to render */}
+      <Outlet />
+    </div>
+  );
+};
+
+export default App;
