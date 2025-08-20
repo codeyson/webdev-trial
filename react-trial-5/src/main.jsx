@@ -1,8 +1,9 @@
-import { StrictMode } from "react"
+import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import Profile from "./components/Profile";
+import DefaultProfile from "./components/DefaultProfile";
 import Spinach from "./components/Spinach";
 import Popeye from "./components/Popeye";
 
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
     path: "profile",
     element: <Profile />,
     children: [
+      { index: true, element: <DefaultProfile /> },
       { path: "spinach", element: <Spinach /> },
       { path: "popeye", element: <Popeye /> },
     ],
