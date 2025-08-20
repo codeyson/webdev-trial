@@ -8,6 +8,7 @@ const Profile = () => {
         <ul>
           <li><Link to="spinach">Spinach</Link></li>
           <li><Link to="popeye">Popeye</Link></li>
+          <li><Link to="/">Home</Link></li>
         </ul>
       </nav>
 
