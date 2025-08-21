@@ -13,7 +13,6 @@ const App = () => {
         </ul>
       </nav>
 
-      {/* This allows child routes to render */}
       <Outlet />
     </div>
   );
